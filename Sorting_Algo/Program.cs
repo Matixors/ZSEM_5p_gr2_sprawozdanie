@@ -33,6 +33,12 @@ namespace Sorting_Algo
             return new int[] { 3, -2, 5, 0, -8, 10};
         }
 
+        public static bool ValidArray(int[] array)
+        {
+            // Przyjmijmy ramy dla tablicy w przedziale (0,100)
+            return array.Length > 0 && array.Length <=100;
+        }
+
         static void Main(string[] args)
         {
             int[] arr = { 11, 5, 54, 23, 6 };
