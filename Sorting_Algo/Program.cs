@@ -39,11 +39,19 @@ namespace Sorting_Algo
             return array.Length > 0 && array.Length <=100;
         }
 
-        static void Main(string[] args)
+       public static void Main(string[] args)
         {
-            int[] arr = { 11, 5, 54, 23, 6 };
-            var sorted = Sort(arr, arr.Min(), arr.Max());
-            Console.WriteLine("Posortwoana tablica: " + string.Join(", ", sorted));
+            int[] arr = GetInputArray();
+            if (ValidArray(arr))
+            {
+                int minValue = arr.Min();
+                int maxValue = arr.Max();
+                int[] sortedArray = CountingSort.Sort(arr, minValue, maxValue);
+            }
+            else
+            {
+                Console.WriteLine("Niepoprawne dane wejściowe");
+            }
         }
     }
 }
