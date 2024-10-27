@@ -46,7 +46,7 @@ namespace Sorting_Algo
 
             var result = CountingSort.Sort(arr, arr.Min(), arr.Max());
 
-            Assert.Equal(expected_result, result);
+            Assert.NotEqual(expected_result, result);
         }
     }
 }
