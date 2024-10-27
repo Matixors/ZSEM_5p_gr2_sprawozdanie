@@ -27,6 +27,12 @@ namespace Sorting_Algo
             return sortedArray;
         }
 
+        public static int[] GetInputArray()
+        {
+            // Uproszczony przykład na potrzeby testów
+            return new int[] { 3, -2, 5, 0, -8, 10};
+        }
+
         static void Main(string[] args)
         {
             int[] arr = { 11, 5, 54, 23, 6 };
