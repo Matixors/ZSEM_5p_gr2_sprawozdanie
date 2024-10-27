@@ -29,5 +29,19 @@ namespace Sorting_Algo
 
             Assert.Equal(expected, sortedArray);
         }
+
+        /// <summary>
+        /// Test z niepoprawnymi danymi (zbyt dużo) wyjście poza zakres (0,100)
+        /// </summary>
+
+        [Fact]
+        public void FullIntegrationTest_Invalid_ReturnValidationArray()
+        {
+            int[] inputArray = new int[105];
+
+            bool isValid = CountingSort.ValidArray(inputArray);
+
+            Assert.False(isValid);
+        }
     }
 }
