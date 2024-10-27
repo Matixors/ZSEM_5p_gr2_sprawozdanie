@@ -39,7 +39,12 @@ namespace Sorting_Algo
             return array.Length > 0 && array.Length <=100;
         }
 
-       public static void Main(string[] args)
+        public static void DisplaySortedArray(int[] SortedArray)
+        {
+            Console.WriteLine("Posortowana tablica: " + string.Join(", ", SortedArray));
+        }
+
+        public static void Main(string[] args)
         {
             int[] arr = GetInputArray();
             if (ValidArray(arr))
@@ -47,10 +52,12 @@ namespace Sorting_Algo
                 int minValue = arr.Min();
                 int maxValue = arr.Max();
                 int[] sortedArray = CountingSort.Sort(arr, minValue, maxValue);
+                DisplaySortedArray(sortedArray);
             }
             else
             {
                 Console.WriteLine("Niepoprawne dane wejściowe");
+
             }
         }
     }
