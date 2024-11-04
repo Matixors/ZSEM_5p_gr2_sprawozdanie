@@ -43,5 +43,26 @@ namespace Sorting_Algo
 
             Assert.False(isValid);
         }
+
+    /// <summary>
+    /// Test sprawdzający pełne działanie programu dla danych zawierających powtarzające się wartości.
+    /// </summary>
+    [Fact]
+    public void FullIntegrationTest_DuplicateValues_ReturnsSortedArrayWithDuplicates()
+    {
+        int[] inputArray = { 5, 3, 5, 1, 3, 2, 5, 3 };
+
+        bool isValid = SortingProgram.ValidateInputArray(inputArray);
+        Assert.True(isValid);
+
+        int minValue = inputArray.Min(); 
+        int maxValue = inputArray.Max();
+
+        int[] sortedArray = CountingSort.Sort(inputArray, minValue, maxValue);
+
+        int[] expected = { 1, 2, 3, 3, 3, 5, 5, 5 };
+
+        Assert.Equal(expected, sortedArray);
+    }
     }
 }
