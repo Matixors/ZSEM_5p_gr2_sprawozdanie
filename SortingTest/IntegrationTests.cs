@@ -52,7 +52,7 @@ namespace Sorting_Algo
     {
         int[] inputArray = { 5, 3, 5, 1, 3, 2, 5, 3 };
 
-        bool isValid = SortingProgram.ValidateInputArray(inputArray);
+        bool isValid = CountingSort.ValidateInputArray(inputArray);
         Assert.True(isValid);
 
         int minValue = inputArray.Min(); 
